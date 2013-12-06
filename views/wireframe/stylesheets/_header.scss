@@ -4,10 +4,25 @@
 
 // site-wide header styles
 .site-header {
+  padding-top: 1em;
+  @include clearfix;
+  padding-bottom: 1em;
+}
+
+.main-logo {
+  @include breakpoint($breakpoint-m) {
+    float: left;
+    @include inline-block;
+  }
 }
 
 .primary-navigation {
-  padding-bottom: 1em;
+  margin-top: 1em;
+  @include breakpoint($breakpoint-m) {
+    float: right;
+    @include inline-block;
+    padding-bottom: 1em;
+  }
   li {
     @include inline-block;
     margin-left: 0.5em;
