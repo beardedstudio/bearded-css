@@ -12,28 +12,32 @@
   %head
     %meta{:charset => "utf-8"}
     %meta{'http-equiv' => "X-UA-Compatible", :content => "IE=edge"}
-    %title Site Name
+    %title Bearded
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %meta{:name => "description", :content => ""}
     %meta{:name => "keywords", :content => ""}
-    %link{:href => "/v1/stylesheets/screen.css", :rel => "stylesheet"}
+    %link{:href => "/wireframe/stylesheets/screen.css", :rel => "stylesheet"}
     %script{:src => "/v1/javascripts/vendor/modernizr.min.js"}
   %body{:class => bodyclass}
     %header.site-header{:role => "banner"}
       .container
         %h1.site-name
-          %a{:href => "/"} Site Name
+          %a{:href => "/"} Bearded
         -# Use an image for your logo
-        %a{:href => "#"}
-          %img.main-logo{:alt => "", :src => ""}
+        %a{:href => "/wireframes/"}
+          %img.main-logo{:alt => "Bearded Logo", :src => "/wireframe/images/logo.svg"}
         %nav.primary-navigation{:role => "navigation"}
           %ul
             %li
-              %a{:href => "/internal.html"} Internal
+              %a{:href => "/internal.html"} Work
             %li
-              %a{:href => "/internal.html"} Internal Two
+              %a{:href => "/internal.html"} Services
             %li
-              %a{:href => "/internal.html"} Internal Three
+              %a{:href => "/internal.html"} About
+            %li
+              %a{:href => "/internal.html"} Blog
+            %li
+              %a{:href => "/internal.html"} Contact
         -#
           %form.search{:role => "form"}
             %label{:for => "search"} Search:
@@ -46,41 +50,58 @@
 
     %footer.site-footer
       .container
-        %section.social-media
-          %ul
-            %li
-              %a{:href => "#", :rel => "me"} Social Account
-            %li
-              %a{:href => "#", :rel => "me"} Social Account
-            %li
-              %a{:href => "#", :rel => "me"} Social Account
-            %li
-              %a{:href => "#", :rel => "me"} Social Account
+        %section.contact
+          %h2 Say Hello
+          %section.contact-information
+            %section.intro
+              %p We'd love to hear from you. Feel free to call, mail a letter, or use the handy contact form to send us a message via electronic mail!
+            %article#organization-info.vcard{:itemscope => "", :itemtype => "http://schema.org/Organization"}
+              %h1.fn.org{:itemprop => "name"} 
+                %a{:href => "#"} Bearded
+              .adr{:itemprop => "address", :itemscope => "", :itemtype => "http://schema.org/PostalAddress"}
+                %div{:itemprop => "streetAddress"}
+                  %span.street-address 6101 Penn Avenue, 
+                  %span.extended-address Suite 302 
+                %span.locality{:itemprop => "addressLocality"} Pittsburgh,
+                %span.region{:itemprop => "addressRegion"} PA
+                %span.postal-code{:itemprop => "postalCode"} 15206
+              %div.tel{:itemprop => "telephone"} 412.376.7273
+          %section.contact-form
+            %form{:action => "#", :role => "form"}
+              .input
+                %label{:for => "first-name"} Name:
+                %input{:name => "first-name", :type => "text"}
+              .input
+                %label{:for => "email"} Email:
+                %input{:name => "email", :type => "email"}
+              .input
+                %select{:name => "State"}
+                  %option{:selected => "selected", :value => ""} Select a Category
+                  %option{:value => "1"} Just Saying Hello
+                  %option{:value => "2"} Request a Proposal
+                  %option{:value => "3"} Inquiring About a Job Opportunity
+              .input
+                %label{:for => "tel"} Subject:
+                %input{:name => "subject", :type => "text"}
+              .input
+                %label{:for => "message"} Message:
+                %textarea{:name => "message", :rows => "4"}
+              %input.submit-button{:type => "submit", :value => "Submit"}
         %nav.footer-nav
           %ul
             %li
-              %a{:href => "#"} About
+              %a{:href => "/internal.html"} Work
             %li
-              %a{:href => "#"} Acknowledgements
+              %a{:href => "/internal.html"} Services
             %li
-              %a{:href => "#"} Support
-
-        %section.contact-information
-          %article#organization-info.vcard{:itemscope => "", :itemtype => "http://schema.org/Organization"}
-            %h1.fn.org{:itemprop => "name"} Company Name
-            .adr{:itemprop => "address", :itemscope => "", :itemtype => "http://schema.org/PostalAddress"}
-              %div{:itemprop => "streetAddress"}
-                %span.street-address 555 Main Street,
-                %span.extended-address Suite 200
-              %span.locality{:itemprop => "addressLocality"} Pittsburgh,
-              %span.region{:itemprop => "addressRegion"} PA
-              %span.postal-code{:itemprop => "postalCode"} 15222
-            %div.tel{:itemprop => "telephone"} 555-1212
-            %div.email
-              %a.email{:href => "#", :itemprop => "email"} Email Us
+              %a{:href => "/internal.html"} About
+            %li
+              %a{:href => "/internal.html"} Blog
+            %li
+              %a{:href => "/internal.html"} Contact
 
         %section.legal{:role => "contentinfo"}
-          %p.copyright Copyright #{Date.today.year.to_s}, Another copyright statement here.
+          %p.copyright &copy; #{Date.today.year.to_s} Bearded LP, all rights reserved.
   -# Uncomment if you need jQuery          
     -# Load jquery from the google cdn. If they're not available, load a local, minified version
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}

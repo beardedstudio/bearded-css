@@ -1,39 +1,101 @@
 %section.main-content{:role => "main"}
   .container
-    %section.featured
-      %h1.title Featured Title
-      %h2.subtitle Subtitle
-      
-      %article.related
-        %h1 A Related Item
-        %p An excerpt from this related item.
-        %a{:href => "#", :class => "read-more"} Read More
-      
-      %article.related
-        %h1 A Related Item
-        %p An excerpt from this related item.
-        %a{:href => "#", :class => "read-more"} Read More
-      
-      %article.related
-        %h1 A Related Item
-        %p An excerpt from this related item.
-        %a{:href => "#", :class => "read-more"} Read More
+    %section.branding
+      %img.inserted-image{:src => "/wireframe/images/main-image.jpg"}
+      .message
+        %h2.tagline 
+          We Make Useful, Beautiful Things
+          %span.tagline-sub For the Multi-Device Web.  
+        %a{:href => "#", :class => "read-more"} Let&rsquo;s talk about your project. &raquo;
 
-    %section.descriptive-name-of-section
-      %h1.title Name of Section
-      %h2.subtitle Subtitle
+    %section.project-group
+      %h2 Our Work
+      %article.project.first
+        %img.inserted-image{:src => "/wireframe/images/image-lg.jpg"}
+        %h3.title
+          %a{:href => "#"}The Children&rsquo;s Museum of Pittsburgh
+      %article.project.second
+        %img.inserted-image{:src => "/wireframe/images/image-sm.jpg"}
+        %h3.title
+          %a{:href => "#"}ScareHouse
+      %article.project.third
+        %img.inserted-image{:src => "/wireframe/images/image-sm.jpg"}
+        %h3.title
+          %a{:href => "#"}Zoobean
+      %a{:href => "#", :class => "read-more"} Want to see more work? Check out our portfolio. &raquo;
 
-      %article.related
-        %h1 A Related Item
-        %p An excerpt from this related item.
-        %a{:href => "#", :class => "read-more"} Read More
-      
-      %article.related
-        %h1 A Related Item
-        %p An excerpt from this related item.
-        %a{:href => "#", :class => "read-more"} Read More
-      
-      %article.related
-        %h1 A Related Item
-        %p An excerpt from this related item.
-        %a{:href => "#", :class => "read-more"} Read More
+
+    %section.testimonial-group
+      %blockquote.testimonial.first
+        %p "I would like Bearded to stop making the rest of us look so bad."
+        %footer 
+          %ul
+            %li.name &ndash; Ethan Marcotte
+            %li.position Author, Responsive Web Design
+      %blockquote.testimonial.second
+        %p "We are thrilled that our new website makes it easy to find out about the Children's Museum and its many programs, while adapting to the various and evolving ways our audience acquires information."
+        %footer 
+          %ul
+            %li.name &ndash; Jane Werner
+            %li.position Executive Director, Children's Museum of Pittsburgh
+      %blockquote.testimonial.third
+        %p "We wanted a company with responsive design experience to help guide our transition to meet the growing number of mobile visitors to our sites. With their expertise Bearded flattened the learning curve, provided great solutions and invaluable ongoing support."
+        %footer 
+          %ul
+            %li.name &ndash; Jeremy Slowe
+            %li.position Web Site Co-ordinator, Yakima Valley Memorial Hospital
+
+    %section.activity
+      %h2 Writing &amp; Speaking
+      %p We love to share the things we&rsquo;re figuring out with the world. Here are some ways we&rsquo;re doing that.
+      %article.activity-item.writing
+        %h3.title
+          %a{:href => "#"}Let&rsquo;s Do It! What Are We Doing?
+        %ul
+          %li.attribution by Matt Griffin
+          %li.publisher on A List Apart
+      %article.activity-item.event
+        %h3.title
+          %a{:href => "#"}Giant Conference
+        %ul
+          %li.attribution Matt Griffin, speaking
+          %li.location United States, Charleston
+          %li.date 11th&ndash;14th June 2014
+      %article.activity-item.writing
+        %h3.title
+          %a{:href => "#"}Design for Extensibility
+        %ul
+          %li.attribution by Patrick Fulton &amp; Matt Griffin
+          %li.publisher on .net Magazine
+      %article.activity-item.writing
+        %h3.title
+          %a{:href => "#"}Five Years, Bearded
+        %ul
+          %li.attribution by Matt Griffin
+          %li.publisher on the Bearded Blog
+
+    %section.about
+      %h2 About Us
+      %section.intro
+        %p Bearded creates useful, beautiful things for the multi-device web. Whether you’re selling products or services, telling stories, or saving the world, we can help you do more of it.
+        %p At Bearded, we put mobile users front and center. All of our work incorporates the latest thinking in responsive web design, assuring the best possible experience for users whether they’re accessing the web through a desktop, laptop, smart phone, or tablet. 
+        %a{:href => "#", :class => "read-more"} Read more about what we do and how we do it. &raquo;
+      %section.profiles
+        %article.person
+          %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+          %h3.name Matt Griffin
+        %article.person
+          %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+          %h3.name Brett Bender
+        %article.person
+          %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+          %h3.name Matt Braun
+        %article.person
+          %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+          %h3.name Caralyn Green
+        %article.person
+          %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+          %h3.name Patrick Fulton
+        %article.person
+          %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+          %h3.name Mark Frey

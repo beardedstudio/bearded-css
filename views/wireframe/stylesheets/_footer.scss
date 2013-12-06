@@ -3,8 +3,33 @@
 .site-footer {
 }
 
-.legal {
+.contact {
+  @include divider-bottom;
+  border-color: $text-color-subtle;
 }
 
-.copyright {
+.contact-information {
+  margin-bottom: 1em;
+  .org {
+    @include heading-5;
+    margin-bottom: 0;
+    a {
+      @include link-reverse;
+    }
+  }
+}
+
+.footer-nav {
+  @include divider-bottom;
+  border-color: $text-color-subtle;
+  text-align: center;
+  li {
+    @include inline-block;
+    @include divider-left;
+    &:first-of-type {
+      margin-left: 0;
+      padding-left: 0;
+      border-left: 0;
+    }
+  }
 }

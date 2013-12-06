@@ -13,6 +13,12 @@
   // default max-width is 81.25em (1300px)
   @include container;
   width: 95%;
+  @include breakpoint($breakpoint-l) {
+    width: 90%;
+  }
+  @include breakpoint($breakpoint-xl) {
+    width: 85%;
+  }
 }
 
 html {}

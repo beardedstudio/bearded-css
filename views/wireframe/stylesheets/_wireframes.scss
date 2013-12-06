@@ -31,6 +31,13 @@ img {
   @include box-sizing(border-box);
 }
 
+.inserted-image {
+  border: 1px solid $border-color;
+  display: block;
+  @include box-sizing(border-box);
+  margin-bottom: 0.5em;
+}
+
 .inline-image {
   margin-bottom: 1em;
   img {

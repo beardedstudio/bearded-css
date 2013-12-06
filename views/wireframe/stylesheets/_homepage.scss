@@ -1,4 +1,185 @@
 // homepage-specific styles
 
-.home {
+.branding {
+  @include divider-bottom;
+  text-align: center;
+  position: relative;
+  @include breakpoint($breakpoint-m) {
+    @include divider-none;
+    margin-bottom: 1.5em;
+  }
+  .message {
+    @include breakpoint($breakpoint-m) {
+      position: absolute;
+      top: 3.5em;
+      width: 100%;
+    }
+  }
+  .tagline {
+    @include breakpoint($breakpoint-l) {
+      font-size: 2.5em;
+    }
+    @include breakpoint($breakpoint-xl) {
+      font-size: 3em;
+    }
+  }
+  .tagline-sub {
+    display: block;
+    font-size: 0.7em;
+    margin-top: 0.25em;
+  }
+}
+.project-group {
+  @include divider-bottom;
+  @include pie-clearfix;
+  .project {
+    margin-top: 1.5em;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    @include breakpoint($breakpoint-s) {
+      &.second, &.third {
+        @include column(6);
+      }
+      &.third {
+        @include last;
+      }
+    }
+    @include breakpoint($breakpoint-m) {
+      &.first {
+        @include column(6);
+      }
+      &.second, &.third {
+        @include column(3);
+        margin-top: 0;
+      }
+      &.third {
+        @include last;
+      }
+    }    
+  }
+  .read-more {
+    @include breakpoint($breakpoint-m) {
+      float: left;
+      margin-top: 2em;
+    }
+  }
+}
+
+.testimonial-group {
+  @include divider-bottom;
+  @include pie-clearfix;
+  @include breakpoint($breakpoint-l) {
+    @include column(7);
+    border-bottom: 0 none;
+    padding-bottom: 0;
+  }
+  .testimonial {
+    margin-top: 1.5em;
+    @include breakpoint($breakpoint-s) {
+      &.second, &.third {
+        @include column(6);
+      }
+      &.third {
+        @include last;
+      }
+    }
+    &:first-of-type {
+      margin-top: 0;
+    }
+    p {
+      background-color: $text-color;
+      color: $background-color;
+      padding: 1em;
+    }
+    footer {
+      font-size: 0.875em;
+      color: $text-color-subtle;
+    }
+  }
+}
+
+.activity {
+  @include divider-bottom;
+  @include pie-clearfix;
+  @include breakpoint($breakpoint-l) {
+    @include column(5);
+    @include last;
+    border-bottom: 0 none;
+    padding-bottom: 0;
+  }
+  .activity-item {
+    margin-bottom: 0.5em;
+    @include breakpoint($breakpoint-s) {
+      @include column(6);
+      @include last-col2;
+    }
+    @include breakpoint($breakpoint-l) {
+      width: 100%;
+      float: none;
+      margin-right: 0;
+    }
+    .title {
+      @include heading-5;
+      margin-bottom: 0;
+    }
+    .attribution, .date, .location, .publisher {
+      font-size: 0.875em;
+      color: $text-color-subtle;
+    }
+  }
+}
+
+.about {
+  clear: both;
+  @include breakpoint($breakpoint-l) {
+    @include divider-top;
+  }
+  .intro {
+    margin-bottom: 1.5em;
+    @include breakpoint($breakpoint-m) {
+      @include column(5);
+    }
+    @include breakpoint($breakpoint-l) {
+      @include column(4);
+    }
+  }
+  .profiles {
+    @include breakpoint($breakpoint-m) {
+      @include column(7);
+      @include last;
+    }
+    @include breakpoint($breakpoint-l) {
+      @include column(8);
+      @include last;
+    }
+    .person {
+      @include column(6);
+      @include last-col2;
+      margin-bottom: 0.5em;
+      @include breakpoint($breakpoint-s) {
+        @include column(4);
+        @include last-col3;
+      }
+      .name {
+        @include heading-4;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.contact {
+  @include pie-clearfix;
+  .contact-information {
+    @include breakpoint($breakpoint-m) {
+      @include column(5);
+    }
+  }
+  .contact-form {
+    @include breakpoint($breakpoint-m) {
+      @include column(7);
+      @include last;
+    }
+  }
 }

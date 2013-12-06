@@ -18,17 +18,48 @@ input[type="tel"],
 input[type="number"],
 input[type="url"],
 textarea {
-  padding: 0.5em 0.65em;
+  padding: 0.5em 0.75em;
+  font-size: 0.875em;  
   @include box-sizing(border-box);
   @include border-radius(2px);
   color: $text-color-subtle;
   margin-left: 0;
   margin-right: 0;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   border: 1px $border-color solid;
 }
 
 form label {
   display: block;
+}
+
+select {
+  border: 1px solid $border-color;
+  height: 3em;
+  line-height: 3em;
+  width: 100%;
+  max-width: 600px;
+}
+
+///// Contact Form
+.contact-form {
+  .input {
+    position: relative;
+    label {
+      position: absolute;
+      top: 0.5em;
+      left: 0.75em;
+    }
+    input {
+      padding-left: 5.5em;
+    }
+    textarea {
+      padding-top: 2em;
+      padding-left: 0.75em;
+    }
+  }
+  .submit-button {
+    @include button-reverse;
+  }
 }
