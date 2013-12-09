@@ -78,21 +78,6 @@ img {
   }
 }
 
-.primary {
-  margin-bottom: 2em;
-  @include breakpoint($breakpoint-m) {
-    @include column(8);
-    @include last;
-    float: right;
-  }
-}
-
-.secondary {
-  @include breakpoint($breakpoint-m) {
-    @include column(4);
-  }
-}
-
 .secondary-navigation {
   @include title-face;
   @include box-sizing(border-box);

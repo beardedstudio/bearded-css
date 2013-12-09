@@ -1,9 +1,6 @@
 .project-detail {
-  max-width: 600px;
-  margin: 0 auto;
   
   .lead-image {
-    display: block;
     @include grid-breakout;
   }
 

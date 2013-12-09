@@ -1,0 +1,103 @@
+%section.main-content{:role => "main"}
+  -# If appropriate, you could use an h1 here and provide more meaning in the document outline.
+  .container
+    = haml :'v1/partials/_breadcrumbs.html'
+    %section.primary      
+      %h1.page-title Internal Page
+      %h2.page-subtitle Subtitle For This Page
+
+      -# EXAMPLE MARKUP FOR A LEAD IMAGE
+      %figure.lead-image
+        %img{:src => "/wireframe/images/image-lg.jpg", :alt => "A Lead Image"}
+
+      %p.intro Bearded creates useful, beautiful things for the multi-device web. Whether you’re selling products or services, telling stories, or saving the world, we can help you do more of it.
+
+      %pLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+
+      %section.team
+        %h2 Meet the Beardeds
+        %section.stats
+          %h3 To learn more about the Beardeds, click the icons below.
+          %ul
+            %li
+              %img.icon{:src => "/wireframe/images/icon-design.svg"}
+            %li
+              %img.icon{:src => "/wireframe/images/icon-dev.svg"}
+            %li
+              %img.icon{:src => "/wireframe/images/icon-content.svg"}
+            %li
+              %img.icon{:src => "/wireframe/images/icon-bulb.svg"}
+            %li
+              %img.icon{:src => "/wireframe/images/icon-bike.svg"}
+            %li
+              %img.icon.last{:src => "/wireframe/images/icon-nice.svg"}
+
+        %section.profiles
+          %article.person
+            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+            %h3.name Matt Griffin
+          %article.person
+            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+            %h3.name Brett Bender
+          %article.person
+            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+            %h3.name Matt Braun
+          %article.person
+            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+            %h3.name Caralyn Green
+          %article.person
+            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+            %h3.name Patrick Fulton
+          %article.person.last
+            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
+            %h3.name Mark Frey
+      %section.testimonial-group
+        %h2 What People Are Saying
+        %blockquote.testimonial
+          %p &ldquo;We are thrilled that our new website makes it easy to find out about the Children's Museum and its many programs, while adapting to the various and evolving ways our audience acquires information.&rdquo;
+          %footer 
+            %ul
+              %li.name &ndash; Jane Werner
+              %li.position Executive Director, Children's Museum of Pittsburgh
+        %blockquote.testimonial
+          %p &ldquo;We wanted a company with responsive design experience to help guide our transition to meet the growing number of mobile visitors to our sites. With their expertise Bearded flattened the learning curve, provided great solutions and invaluable ongoing support.&rdquo;
+          %footer 
+            %ul
+              %li.name &ndash; Jeremy Slowe
+              %li.position Web Site Co-ordinator, Yakima Valley Memorial Hospital
+
+        %blockquote.testimonial
+          %p &ldquo;They’re experts in their field and they know what they’re doing. They know how to talk to clients and translate crazy weird internet things into English.&rdquo;
+          %footer 
+            %ul
+              %li.name &ndash; Sam Laffey
+              %li.position Marketing Associate, Pittsburgh Glass Center
+
+        %blockquote.testimonial
+          %p &ldquo;For our 30th Anniversary, Bearded created a beautifully-designed iPad App that created quite the buzz. It told our story in a wonderfully engaging, interactive, and fun way. The Bearded team was a pleasure to work with, and even went a step beyond, helping to set up the devices to ensure its success. The app was a real highlight for our anniversary event.&rdquo;
+
+          %footer 
+            %ul
+              %li.name &ndash; Michael Tang
+              %li.position Vice President, Communications, Local Initiatives Support Corporation
+      %section.client-list
+        %ul
+          %li 9/11 Tribute Center
+          %li AIGA Pittsburgh
+          %li American Association for Homecare
+          %li American Institute of Chemical Engineers
+          %li Andy Warhol Museum
+          %li Astorino Architects
+          %li Bike Pittsburgh
+          %li Carnegie Museum of Art
+          %li Chatham Baroque
+          %li Children's Museum of Pittsburgh
+          %li East Liberty Development
+          %li Local Initiatives Support Corporation
+          %li Mario Lemieux Foundation
+          %li Penn's Corner Farm Alliance
+          %li Pittsburgh Glass Center
+          %li RIDC
+          %li Rodef Shalom Congregation
+          %li ScareHouseSprout Fund
+          %li Yakima Valley Memorial Hospital
