@@ -1,0 +1,89 @@
+.project-detail {
+  max-width: 700px;
+  margin: 0 auto;
+  
+  .page-title {
+    @include heading-1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  blockquote {
+    @include heading-2;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
+  .intro {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
+  .content-wrap {
+    position: relative;
+    p {
+      @include breakpoint($breakpoint-m) {
+        @include box-sizing(border-box);
+        padding-right: 10em;
+      }
+    }
+    .button {
+      @include button;
+      display: block;  
+      text-align: center;
+      margin-bottom: 1em;
+      @include breakpoint($breakpoint-m) {
+        position: absolute;
+        top: 2em;
+        right: -2em;
+        padding-left: 3em;
+        padding-right: 3em;
+      }
+    }
+  }
+  .stats {
+    @include divider-top;
+    @include divider-bottom;
+    @include pie-clearfix;
+    border-style: double;
+    border-width: 5px;
+    border-right: 0 none;
+    border-left: 0 none;
+    @include breakpoint($breakpoint-m) {
+      padding: 0;
+    }
+    li {
+      @include divider-bottom;
+      &.last {
+        border-bottom: 0 none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      @include breakpoint($breakpoint-m) {
+        @include column(4);
+        @include last-col3;
+        border-bottom: 0 none;
+        margin-bottom: 0;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        @include divider-right;
+        &.last {
+          border-right: 0 none;
+          padding-right: 0;
+          margin-right: 0;
+        }
+      }
+      label {
+        font-size: 0.875em;
+        color: $text_color_subtle;
+        display: block;
+      }
+      span {
+        @include heading-3;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+%section.main-content{:role => "main"}
+  -# If appropriate, you could use an h1 here and provide more meaning in the document outline.
+  .container
+    = haml :'v1/partials/_breadcrumbs.html'
+    %section.project-detail   
+      %h1.page-title ScareHouse
+      -# EXAMPLE MARKUP FOR A LEAD IMAGE
+      %img{:class => "lead-image", :src => "/wireframe/images/image-lg.jpg", :alt => "A Lead Image"}
+
+      %blockquote &ldquo;One of America&rsquo;s Scariest Halloween Attractions&rdquo;
+
+      %p.intro One of America’s top haunted houses, Pittsburgh’s ScareHouse immerses visitors in a Hollywood-quality experience that thrills, chills, and scares the living daylights out of you.
+
+      %section.content-wrap
+        %p ScareHouse became so successful at terrifying the masses, in fact, that they needed a newer, faster, SEO-friendly, mobile-first website to keep up with the demand. Up to the challenge, Bearded created a bloody fun website for what the Travel Channel calls one of  “America’s Scariest Halloween Attractions” – and what iconic horror director Guillermo del Toro once called “beautiful.”
+
+        %a{:href => "#", :class => "button"}Get Creepy
+
+      %p Built on a rock-solid Ruby on Rails CMS of our own devising, Scarehouse’s new responsive site works well on any device, whether visitors plan their fright night from a desktop or tablet, or purchase last-minute tickets on their smart phone. The site encourages visitors to make reservations online for specific time slots, and highlights essential information like the convenient location, parking, and free shuttle from an off-site lot.
+
+      %p Inspired by ScareHouse’s demonic clowns, deranged dolls, and brain-eating undead, the website features a gritty design and darkly delightful interactions. Hover over buttons, and they fill with blood. Scroll down an interior page and a pair of creepy babies awaits.
+
+      %p The more you explore ScareHouse’s website, the more charmingly disturbing details you'll discover.
+
+      %figure.inline-image
+        %img{:src => "/wireframe/images/image-lg.jpg"}
+        %figcaption
+          This is the image caption text.
+
+      %ul.stats
+        %li
+          %label Client
+          %span.data ScareHouse
+        %li
+          %label Year
+          %span.data 2013
+        %li.last
+          %label Built with
+          %span.data Ruby on Rails
