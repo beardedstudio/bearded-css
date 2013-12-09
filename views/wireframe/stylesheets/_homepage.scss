@@ -1,5 +1,15 @@
 // homepage-specific styles
 
+.read-more {
+  margin-top: 1.5em;
+  display: block;
+  margin-bottom: 1em;
+  @include breakpoint($breakpoint-s) {
+    clear: both;
+    float: left;
+  }
+}
+
 .branding {
   @include divider-bottom;
   text-align: center;
@@ -28,6 +38,9 @@
     font-size: 0.7em;
     margin-top: 0.25em;
   }
+  .read-more {
+    float: none;
+  }
 }
 .project-group {
   @include divider-bottom;
@@ -38,55 +51,26 @@
       margin-top: 0;
     }
     @include breakpoint($breakpoint-s) {
-      &.second, &.third {
         @include column(6);
-      }
-      &.third {
-        @include last;
-      }
-    }
-    @include breakpoint($breakpoint-m) {
-      &.first {
-        @include column(6);
-      }
-      &.second, &.third {
-        @include column(3);
         margin-top: 0;
-      }
-      &.third {
-        @include last;
-      }
-    }    
-  }
-  .read-more {
-    @include breakpoint($breakpoint-m) {
-      float: left;
-      margin-top: 2em;
+        &.last {
+          @include last;
+        }
     }
+    @include breakpoint($breakpoint-m) {
+    }    
   }
 }
 
 .testimonial-group {
   @include divider-bottom;
   @include pie-clearfix;
-  @include breakpoint($breakpoint-l) {
-    @include column(7);
+  @include breakpoint($breakpoint-m) {
+    @include column(6);
     border-bottom: 0 none;
     padding-bottom: 0;
   }
   .testimonial {
-    margin-top: 1.5em;
-    @include breakpoint($breakpoint-s) {
-      &.second, &.third {
-        @include column(6);
-      }
-      &.third {
-        @include last;
-      }
-    }
-    &.first {
-      margin-top: 0;
-    }
     footer {
       font-size: 0.875em;
       color: $text-color-subtle;
@@ -95,10 +79,9 @@
 }
 
 .activity {
-  @include divider-bottom;
   @include pie-clearfix;
-  @include breakpoint($breakpoint-l) {
-    @include column(5);
+  @include breakpoint($breakpoint-m) {
+    @include column(6);
     @include last;
     border-bottom: 0 none;
     padding-bottom: 0;
@@ -108,11 +91,6 @@
     @include breakpoint($breakpoint-s) {
       @include column(6);
       @include last-col2;
-    }
-    @include breakpoint($breakpoint-l) {
-      width: 100%;
-      float: none;
-      margin-right: 0;
     }
     .title {
       @include heading-5;
@@ -125,11 +103,28 @@
   }
 }
 
+.services {
+  @include divider-top;
+  @include divider-bottom;
+  @include pie-clearfix;
+  clear: both;
+  float: left;
+  .step {
+    @include breakpoint($breakpoint-s) {
+      @include column(6);
+      @include last-col2;
+      margin-bottom: $gutter_width;
+    }
+    @include breakpoint($breakpoint-m) {
+      @include column(3);
+      @include last-col4;
+      margin-bottom: 0;
+    }
+  }
+}
+
 .about {
   clear: both;
-  @include breakpoint($breakpoint-l) {
-    @include divider-top;
-  }
   .intro {
     margin-bottom: 1.5em;
     @include breakpoint($breakpoint-m) {
@@ -149,8 +144,8 @@
       @include last;
     }
     .person {
-      @include column(6);
-      @include last-col2;
+      @include column(4);
+      @include last-col3;
       margin-bottom: 1em;
       @include breakpoint($breakpoint-s) {
         @include column(4);
