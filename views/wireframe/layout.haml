@@ -17,15 +17,19 @@
     %meta{:name => "description", :content => ""}
     %meta{:name => "keywords", :content => ""}
     %link{:href => "/wireframe/stylesheets/screen.css", :rel => "stylesheet"}
-    %script{:src => "/v1/javascripts/vendor/modernizr.min.js"}
+    %script{:src => "/wireframe/javascripts/vendor/modernizr.min.js"}
   %body{:class => bodyclass}
     %header.site-header{:role => "banner"}
       .container
         %h1.site-name
           %a{:href => "/"} Bearded
         -# Use an image for your logo
-        %a.main-logo{:href => "/wireframes/"}
+        %a.main-logo{:href => "/wireframe/"}
           %img{:alt => "Bearded Logo", :src => "/wireframe/images/logo.svg"}
+        
+        %button.menu-trigger
+          %span.icon-menu
+            Menu
         %nav.primary-navigation{:role => "navigation"}
           %ul
             %li
@@ -102,10 +106,8 @@
 
         %section.legal{:role => "contentinfo"}
           %p.copyright &copy; #{Date.today.year.to_s} Bearded LP, all rights reserved.
-  -# Uncomment if you need jQuery          
     -# Load jquery from the google cdn. If they're not available, load a local, minified version
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
     :javascript
-      window.jQuery || document.write('<script src="/v1/javascripts/vendor/jquery.min.js"><\/script>')
-  -# Uncomment if you need other JS and/or analytics scripts
-    %script{:src => "/v1/javascripts/name-of-file.js"}
+      window.jQuery || document.write('<script src="/wireframe/javascripts/vendor/jquery.min.js"><\/script>')
+    %script{:src => "/wireframe/javascripts/navigation.js"}

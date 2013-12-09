@@ -16,10 +16,31 @@
   }
 }
 
-.primary-navigation {
-  margin-top: 1em;
+.menu-trigger {
+  
+  .no-js & {
+    display: none;
+  }
+
   @include breakpoint($breakpoint-m) {
+    display: none !important;
+  }
+}
+
+.primary-navigation {
+  display: none;
+  margin-top: 1em;
+
+  // show it if js is disabled
+  .no-js & {
+    display: block;
+  }
+
+  @include breakpoint($breakpoint-m) {
+    // always show it on desktop, regardless of js state
+    display: block !important;
     float: right;
+
     @include inline-block;
     padding-bottom: 1em;
   }
