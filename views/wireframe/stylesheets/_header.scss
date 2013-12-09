@@ -10,6 +10,11 @@
 }
 
 .main-logo {
+  float: left;
+  max-width: 150px;
+  @include breakpoint($breakpoint-s) {
+    max-width: 200px;
+  }
   @include breakpoint($breakpoint-m) {
     float: left;
     @include inline-block;
@@ -17,7 +22,13 @@
 }
 
 .menu-trigger {
-  
+  @include inline-block;
+  float: right;
+  text-align: right;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: $link-color;
+
   .no-js & {
     display: none;
   }
@@ -29,7 +40,19 @@
 
 .primary-navigation {
   display: none;
-  margin-top: 1em;
+  clear: both;
+  background-color: $background-color-subtle;
+  padding: 1em 0;
+  li {
+    display: block;
+    text-align: center;
+    @include divider-top;
+    &:first-of-type {
+      border-top: 0 none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
 
   // show it if js is disabled
   .no-js & {
@@ -40,15 +63,20 @@
     // always show it on desktop, regardless of js state
     display: block !important;
     float: right;
-
     @include inline-block;
     padding-bottom: 1em;
-  }
-  li {
-    @include inline-block;
-    margin-left: 0.5em;
-    &:first-of-type {
-      margin-left: 0;
+    clear: inherit;
+    background-color: inherit;
+
+    li {
+      @include inline-block;
+      margin-left: 0.5em;
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0 none;
+      &:first-of-type {
+        margin-left: 0;
+      }
     }
   }
 }

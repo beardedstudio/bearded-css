@@ -107,6 +107,20 @@ em, i {
   font-style: italic;
 }
 
+button, button:focus {
+  border: 0 none;
+  outline: none; 
+  background-color: inherit;
+}
+
+button {
+  font-size: 1em;
+}
+
+button::-moz-focus-inner { 
+  border: 0 none; 
+  outline: none; 
+}
 
 // Other elements
 //////////////////////////////////////
