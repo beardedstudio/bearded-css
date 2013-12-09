@@ -128,21 +128,30 @@
   .intro {
     margin-bottom: 1.5em;
     @include breakpoint($breakpoint-m) {
-      @include column(5);
+      @include column(6);
     }
-    @include breakpoint($breakpoint-l) {
-      @include column(4);
+  }
+  .stats {
+    @include pie-clearfix;
+    margin-bottom: 1em;
+    @include breakpoint($breakpoint-m) {
+      @include column(6);
+      @include last;
+    }
+    h3 {
+      @include heading-5;
+      margin-bottom: 1em;
+    }
+    .icon {
+      @include column(2);
+      max-width: 40px;
+      &.last {
+        @include last;
+      }
     }
   }
   .profiles {
-    @include breakpoint($breakpoint-m) {
-      @include column(7);
-      @include last;
-    }
-    @include breakpoint($breakpoint-l) {
-      @include column(8);
-      @include last;
-    }
+    clear: both;
     .person {
       @include column(4);
       @include last-col3;
@@ -150,6 +159,10 @@
       @include breakpoint($breakpoint-s) {
         @include column(4);
         @include last-col3;
+      }
+      @include breakpoint($breakpoint-m) {
+        @include column(2);
+        @include last-col6;
       }
       .name {
         @include heading-4;

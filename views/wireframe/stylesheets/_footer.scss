@@ -5,6 +5,8 @@
 
 .contact {
   @include divider-bottom;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
   border-color: $text-color-subtle;
 }
 
@@ -23,6 +25,13 @@
   margin-bottom: 1em;
   border-color: $text-color-subtle;
   text-align: center;
+  @include breakpoint($breakpoint-m) {
+    border-top: 0 none;
+    text-align: left;
+    @include column(7);
+    @include last;
+    float: right;
+  }
   li {
     @include inline-block;
     @include divider-left;
@@ -31,5 +40,13 @@
       padding-left: 0;
       border-left: 0;
     }
+  }
+}
+
+.legal {
+  text-align: center;
+  @include breakpoint($breakpoint-m) {
+    text-align: left;
+    @include column(5);
   }
 }
