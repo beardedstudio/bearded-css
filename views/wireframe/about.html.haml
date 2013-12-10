@@ -1,7 +1,7 @@
 %section.main-content{:role => "main"}
   -# If appropriate, you could use an h1 here and provide more meaning in the document outline.
   .container
-    = haml :'v1/partials/_breadcrumbs.html'
+    = haml :'wireframe/partials/_breadcrumbs.html'
     %section.primary.about-detail      
       %h1.page-title About Us
 
@@ -16,7 +16,6 @@
       %section.team
         %h2 Meet the Beardeds
         %section.stats
-          %h3 To learn more about the Beardeds, click the icons below.
           %ul
             %li
               %img.icon{:src => "/wireframe/images/icon-design.svg"}
@@ -30,26 +29,33 @@
               %img.icon{:src => "/wireframe/images/icon-bike.svg"}
             %li
               %img.icon.last{:src => "/wireframe/images/icon-nice.svg"}
+          %p.hint-text Click on the icons to learn more about the Beardeds.
 
         %section.profiles
           %article.person
             %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
             %h3.name Matt Griffin
+            %span.title Founder
           %article.person
             %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
             %h3.name Brett Bender
+            %span.title Lead Developer
           %article.person
             %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
             %h3.name Matt Braun
+            %span.title Lead Designer
           %article.person
             %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
             %h3.name Caralyn Green
+            %span.title Content Strategist
           %article.person
             %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
             %h3.name Patrick Fulton
+            %span.title Developer
           %article.person.last
             %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
             %h3.name Mark Frey
+            %span.title Developer
       %section.testimonial-group
         %blockquote.testimonial
           %p &ldquo;We are thrilled that our new website makes it easy to find out about the Children's Museum and its many programs, while adapting to the various and evolving ways our audience acquires information.&rdquo;
@@ -100,3 +106,4 @@
           %li Rodef Shalom Congregation
           %li ScareHouseSprout Fund
           %li Yakima Valley Memorial Hospital
+      %a{:href => "#", :class => "read-more"} Read more about how we collaborate with our clients. &raquo;

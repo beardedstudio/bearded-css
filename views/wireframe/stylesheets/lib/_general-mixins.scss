@@ -84,4 +84,9 @@
     margin-right: -15%;
     width: 130%;
   }
+  @include breakpoint($breakpoint-xl) {
+    margin-left: -20%;
+    margin-right: -20%;
+    width: 140%;
+  }
 }

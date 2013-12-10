@@ -6,9 +6,12 @@
   .stats {
     @include pie-clearfix;
     margin-bottom: 1em;
-    h3 {
-      @include heading-5;
-      margin-bottom: 1em;
+    .hint-text {
+      clear: both;
+      margin: 0.5em 0 0 0;
+    }
+    ul {
+      @include pie-clearfix;
     }
     .icon {
       @include column(2);
@@ -70,6 +73,8 @@
 .client-list {
   @include grid-breakout;
   @include divider-top;
+  @include pie-clearfix;
+  @include divider-bottom;
   li {
     @include breakpoint($breakpoint-s) {
       @include column(6);
@@ -80,4 +85,10 @@
       @include last-col3;
     }
   }
+}
+
+.about-detail .read-more {
+  clear: both;
+  text-align: center;
+  display: block;
 }
