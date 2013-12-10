@@ -1,5 +1,4 @@
 .project-detail {
-  
   .lead-image {
     @include grid-breakout;
   }
@@ -86,6 +85,88 @@
         @include heading-3;
         display: block;
       }
+    }
+  }
+}
+
+///// Project List View
+
+.project-list {
+  .project-group-clients, .project-group-internal {
+    .project {
+      margin-bottom: 1em;
+      @include breakpoint($breakpoint-l) {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}
+
+.project-list .project-group-clients {
+  @include pie-clearfix;
+  @include divider-bottom;
+  .project {
+    @include breakpoint($breakpoint-s) {
+      @include column(6);
+      &:nth-of-type(n) {
+        margin-right: $gutter-width;
+        .lt-ie8 & {
+          margin-right: $gutter_width - 0.25%;
+        }
+        float: left;
+        clear: none;
+      }
+      &:nth-of-type(2n+3) {
+        @include last;
+        float: right;
+      }
+      &:nth-of-type(2n+4) {
+        clear: both;
+      }
+      &:nth-of-type(1) {
+        @include column(12);
+        @include last;
+      }
+    }
+    @include breakpoint($breakpoint-m) {
+      @include column(4);
+      @include last-col3;
+      &:nth-of-type(1) {
+        @include column(4);
+      }
+    }
+    @include breakpoint($breakpoint-l) {
+      @include column(3);
+      @include last-col4;
+      &:nth-of-type(n) {
+        clear: none;
+      }
+      &:nth-of-type(4n+6) {
+        clear: both;
+      }
+      &:nth-of-type(1), &:nth-of-type(2) {
+        @include column(6);
+        margin-right: $gutter_width;
+      }
+      &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) {
+        @include column(4);
+        margin-right: $gutter_width;
+      }
+      &:nth-of-type(2), &:nth-of-type(5) {
+        @include last;
+        clear: none;
+      }
+    }
+  }
+}
+.project-list .project-group-internal {
+  .project {
+    @include breakpoint($breakpoint-s) {
+      margin-bottom: 1.5em;
+    }
+    @include breakpoint($breakpoint-m) {
+      @include column(4);
+      @include last-col3;
     }
   }
 }
