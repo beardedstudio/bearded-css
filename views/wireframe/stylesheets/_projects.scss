@@ -4,12 +4,6 @@
     @include grid-breakout;
   }
 
-  .page-title {
-    @include heading-1;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
   blockquote {
     @include heading-2;
     text-transform: uppercase;

@@ -3,17 +3,9 @@
 }
 
 .team {
-  @include grid-breakout;
-  @include divider-bottom;
-  @include divider-top;
-  @include pie-clearfix;
   .stats {
     @include pie-clearfix;
     margin-bottom: 1em;
-    @include breakpoint($breakpoint-m) {
-      @include column(6);
-      @include last;
-    }
     h3 {
       @include heading-5;
       margin-bottom: 1em;
@@ -48,9 +40,44 @@
   }
 }
 
+.about-detail .team {
+  @include grid-breakout;
+  @include divider-bottom;
+  @include divider-top;
+  @include pie-clearfix;
+}
+
 .testimonial {
   footer {
     font-size: 0.875em;
     color: $text-color-subtle;
+  }
+}
+
+.about-detail {
+  .testimonial-group {
+    @include pie-clearfix;
+    .testimonial {
+      @include breakpoint($breakpoint-m) {
+        @include column(6);
+        margin-bottom: 1em;
+        @include last-col2;        
+      }
+    }
+  }
+}
+
+.client-list {
+  @include grid-breakout;
+  @include divider-top;
+  li {
+    @include breakpoint($breakpoint-s) {
+      @include column(6);
+      @include last-col2;
+    }
+    @include breakpoint($breakpoint-l) {
+      @include column(4);
+      @include last-col3;
+    }
   }
 }
