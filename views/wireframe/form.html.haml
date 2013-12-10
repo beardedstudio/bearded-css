@@ -2,31 +2,49 @@
   -# If appropriate, you could use an h1 here and provide more meaning in the document outline.
   .container
     = haml :'v1/partials/_breadcrumbs.html'
-    %section.primary
-      %h1.page-title Internal Page
-      %h2.page-subtitle Subtitle For This Page
-      
-      %form{:action => "#", :role => "form"}
-        .input
-          %label{:for => "first-name"} First Name:
-          %input{:name => "first-name", :placeholder => "First Name", :type => "text"}
-        .input
-          %label{:for => "last-name"} Last Name:
-          %input{:name => "last-name", :placeholder => "Last Name", :type => "text"}
-        .input
-          %label{:for => "email"} Email:
-          %input{:name => "email", :placeholder => "Email", :type => "email"}
-        .input
-          %label{:for => "tel"} Phone:
-          %input{:name => "tel", :placeholder => "Phone", :type => "tel"}
-        .input
-          %label{:for => "message"} Message:
-          %textarea{:name => "message", :placeholder => "Your Message"}
-
-        %input{:type => "submit", :value => "Submit"}
+    %section.contact-detail
+      %h1.page-title Contact Us
+      %aside.secondary{:role => "complementary"}
+        %section.contact-information
+          %section.intro
+            %p We'd love to hear from you. Feel free to call, mail a letter, or use the handy contact form to send us a message via electronic mail!
+          %article#organization-info.vcard{:itemscope => "", :itemtype => "http://schema.org/Organization"}
+            %h1.fn.org{:itemprop => "name"} 
+              %a{:href => "#"} Bearded
+            .adr{:itemprop => "address", :itemscope => "", :itemtype => "http://schema.org/PostalAddress"}
+              %div{:itemprop => "streetAddress"}
+                %span.street-address 6101 Penn Avenue, 
+                %span.extended-address Suite 302 
+              %span.locality{:itemprop => "addressLocality"} Pittsburgh,
+              %span.region{:itemprop => "addressRegion"} PA
+              %span.postal-code{:itemprop => "postalCode"} 15206
+            %div.tel{:itemprop => "telephone"} 412.376.7273
+      %section.contact-form
+        %form{:action => "#", :role => "form"}
+          .input
+            %label{:for => "first-name"} Name:
+            %input{:name => "first-name", :type => "text"}
+          .input
+            %label{:for => "email"} Email:
+            %input{:name => "email", :type => "email"}
+          .input
+            %select{:name => "State"}
+              %option{:selected => "selected", :value => ""} Select a Category
+              %option{:value => "1"} Just Saying Hello
+              %option{:value => "2"} Request a Proposal
+              %option{:value => "3"} Inquiring About a Job Opportunity
+          .input
+            %label{:for => "timeline"} Timeline:
+            %input{:name => "timeline", :type => "text"}
+            %p.hint-text We&rsquo;ll help you put together a realistic timeline for the project, but are there any events, product releases, or other important dates that we should factior in to the schedule?
+          .input
+            %label{:for => "budget"} Budget:
+            %input{:name => "budget", :type => "text"}
+            %p.hint-text Our project budgets can range anywhere from $450,000–35,000, depending on project scope. Help us scale things appropriately by letting us know the cost range you'd like to work within.
+          .input
+            %label{:for => "message"} Message:
+            %textarea{:name => "message", :rows => "4"}
+          %input.submit-button{:type => "submit", :value => "Submit"}
 
         -# alternatively, use the <button> element
           %button{:class => "submit-btn"} Submit
-    -# MOVE THIS ASIDE IN THE MARKUP AS NEEDED
-    %aside.secondary{:role => "complementary"}
-      = haml :'v1/partials/_secondary-navigation.html'

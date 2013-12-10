@@ -3,24 +3,6 @@
 .site-footer {
 }
 
-.contact {
-  @include divider-bottom;
-  padding-bottom: 1.5em;
-  margin-bottom: 1.5em;
-  border-color: $text-color-subtle;
-}
-
-.contact-information {
-  margin-bottom: 1em;
-  .org {
-    @include heading-5;
-    margin-bottom: 0;
-    a {
-      @include link-reverse;
-    }
-  }
-}
-
 .footer-nav {
   margin-bottom: 1em;
   border-color: $text-color-subtle;
@@ -51,17 +33,37 @@
   }
 }
 
-.contact {
+footer .contact {
   @include pie-clearfix;
+  @include divider-bottom;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  border-color: $text-color-subtle;
   .contact-information {
+    margin-bottom: 1em;
     @include breakpoint($breakpoint-m) {
       @include column(5);
     }
+    .org {
+      a {
+        @include link-reverse;
+      }
+    }
   }
   .contact-form {
+    .submit-button {
+      @include button-reverse;
+    }
     @include breakpoint($breakpoint-m) {
       @include column(7);
       @include last;
     }
+  }
+}
+
+.contact-information {
+  .org {
+    @include heading-5;
+    margin-bottom: 0;
   }
 }
