@@ -49,6 +49,13 @@ select {
   margin-left: 0.5em;
 }
 
+form .input {
+  margin-bottom: 1em;
+  .hint-text {
+    margin-bottom: 0;
+  }
+}
+
 ///// Contact Form
 .contact-form {
   .input {

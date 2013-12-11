@@ -11,10 +11,10 @@
       @include word-break(break-all);
       @include hyphens(auto);
     }
-    .page-title {
-      @include heading-1;
-      text-transform: uppercase;
-      text-align: center;
-    }
+  }
+  .page-title {
+    @include heading-1;
+    text-transform: uppercase;
+    text-align: center;
   }
 }

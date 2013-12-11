@@ -7,7 +7,7 @@
       %aside.secondary{:role => "complementary"}
         %section.contact-information
           %section.intro
-            %p We'd love to hear from you. Feel free to call, mail a letter, or use the handy contact form to send us a message via electronic mail!
+            %p We help folks from around the world bring their web projects to life. Ready to get started? We’d love to hear from you.
           %article#organization-info.vcard{:itemscope => "", :itemtype => "http://schema.org/Organization"}
             %h1.fn.org{:itemprop => "name"} 
               %a{:href => "#"} Bearded
@@ -28,6 +28,9 @@
             %label{:for => "email"} Email:
             %input{:name => "email", :type => "email"}
           .input
+            %label{:for => "phone"} Phone:
+            %input{:name => "phone", :type => "text"}
+          .input
             %select{:name => "State"}
               %option{:selected => "selected", :value => ""} Select a Category
               %option{:value => "1"} Just Saying Hello
@@ -36,11 +39,11 @@
           .input
             %label{:for => "timeline"} Timeline:
             %input{:name => "timeline", :type => "text"}
-            %p.hint-text We&rsquo;ll help you put together a realistic timeline for the project, but are there any events, product releases, or other important dates that we should factior in to the schedule?
+            %p.hint-text When will your project to go live? What’s driving the launch date?
           .input
             %label{:for => "budget"} Budget:
             %input{:name => "budget", :type => "text"}
-            %p.hint-text Our project budgets can range anywhere from $450,000–35,000, depending on project scope. Help us scale things appropriately by letting us know the cost range you'd like to work within.
+            %p.hint-text Our projects range from $35,000 to $450,000. We will tailor your scope to meet your goals and budget.
           .input
             %label{:for => "message"} Message:
             %textarea{:name => "message", :rows => "4"}
