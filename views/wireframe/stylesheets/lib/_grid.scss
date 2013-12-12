@@ -35,11 +35,11 @@ $grid_width: ((($column_width+($gutter_width))*$columns)-$gutter_width);
 }
 
 @mixin prepend($num) {
-  margin-left: column_width($num) + ($gutter_width * 2);
+  margin-left: column_width($num) + ($gutter_width);
 }
 
 @mixin append($num) {
-  margin-right: column_width($num) + ($gutter_width * 2);
+  margin-right: column_width($num) + ($gutter_width);
 }
 
 @mixin last {

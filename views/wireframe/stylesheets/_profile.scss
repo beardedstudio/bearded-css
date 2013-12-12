@@ -2,6 +2,12 @@
   .profile-content {
     @include grid-breakout;  
   }
+  .page-title {
+    text-align: left;
+    @include breakpoint($breakpoint-s) {
+      @include prepend(3);
+    }
+  }
   .profile-image {
     border: 1px solid $border-color;
     display: block;
