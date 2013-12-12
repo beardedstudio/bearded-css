@@ -1,0 +1,14 @@
+.activity-group {
+  @include pie-clearfix;
+  .activity {
+    margin-bottom: 0.5em;
+    .title {
+      @include heading-5;
+      margin-bottom: 0;
+    }
+    .attribution, .date, .location, .publisher {
+      font-size: 0.875em;
+      color: $text-color-subtle;
+    }
+  }
+}

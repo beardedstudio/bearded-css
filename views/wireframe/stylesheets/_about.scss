@@ -92,3 +92,18 @@
   text-align: center;
   display: block;
 }
+
+.about-detail .activity-group {
+  @include grid-breakout;
+  @include divider-top;
+  .activity {
+    @include breakpoint($breakpoint-s) {
+      @include column(6);
+      @include last-col2;
+    }
+    @include breakpoint($breakpoint-m) {
+      @include column(4);
+      @include last-col3;
+    }
+  }
+}

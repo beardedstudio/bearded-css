@@ -73,27 +73,17 @@
     }
   }
 
-  .activity {
-    @include pie-clearfix;
+  .activity-group {
     @include breakpoint($breakpoint-m) {
       @include column(6);
       @include last;
       border-bottom: 0 none;
       padding-bottom: 0;
     }
-    .activity-item {
-      margin-bottom: 0.5em;
+    .activity {
       @include breakpoint($breakpoint-s) {
         @include column(6);
         @include last-col2;
-      }
-      .title {
-        @include heading-5;
-        margin-bottom: 0;
-      }
-      .attribution, .date, .location, .publisher {
-        font-size: 0.875em;
-        color: $text-color-subtle;
       }
     }
   }
@@ -104,12 +94,15 @@
     @include pie-clearfix;
     clear: both;
     float: left;
+    @include breakpoint($breakpoint-xl) {
+      margin-left: -5%;
+      margin-right: -5%;
+      width: 110%;
+    }
     .step {
-      @include breakpoint($breakpoint-s) {
-        @include column(6);
-        @include last-col2;
-        margin-bottom: $gutter_width;
-      }
+      @include column(6);
+      @include last-col2;
+      margin-bottom: $gutter_width;
       @include breakpoint($breakpoint-m) {
         @include column(3);
         @include last-col4;

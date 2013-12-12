@@ -66,7 +66,7 @@ form .input {
       left: 0.75em;
     }
     input {
-      padding-left: 6em;
+      padding-left: 5.5em;
     }
     textarea {
       padding-top: 2em;
@@ -76,17 +76,6 @@ form .input {
 }
 
 ///// Contact Detail View
-.contact-detail {
-  .secondary {
-    margin-bottom: 1.5em;
-    @include breakpoint($breakpoint-m) {
-      @include column(5);
-    }
-  }
-  .contact-form {
-    @include breakpoint($breakpoint-m) {
-      @include column(7);
-      @include last;
-    }    
-  }
+.contact-information {
+  margin-bottom: 1.5em;
 }

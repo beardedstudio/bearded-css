@@ -1,0 +1,81 @@
+.profile {
+  .profile-content {
+    @include grid-breakout;  
+  }
+  .profile-image {
+    border: 1px solid $border-color;
+    display: block;
+    margin-bottom: 1em;
+    @include box-sizing(border-box);
+    @include breakpoint($breakpoint-s) {
+      @include column(3);
+    }
+  }
+  .profile-copy {
+    @include breakpoint($breakpoint-s) {
+      @include column(9);
+      @include last;
+    }
+    @include breakpoint($breakpoint-l) {
+      @include column(6);
+    }
+  }
+  .secondary {
+    clear: both;
+    @include breakpoint($breakpoint-l) {
+      clear: none;
+      @include column(3);
+      @include last;
+    }
+
+    .networks, .expertise {
+      @include divider-top;
+      @include pie-clearfix;  
+      h2 {
+        @include heading-4;
+      }
+      li {
+        margin-bottom: 0.5em;
+        line-height: 1.2;
+        @include breakpoint($breakpoint-s) {
+          @include column(6);
+          @include last-col2;
+        }  
+        @include breakpoint($breakpoint-m) {
+          @include column(4);
+          @include last-col3;
+        }  
+        @include breakpoint($breakpoint-l) {
+          @include column(12);
+          @include last;
+        }  
+      }
+    }
+    .networks {
+      @include breakpoint($breakpoint-l) {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0 none;
+      }
+    }
+  }
+  .activity-group {
+    clear: both;
+    @include divider-top;
+    @include grid-breakout;
+    .activity {
+      @include breakpoint($breakpoint-s) {
+        @include column(6);
+        @include last-col2;
+      }
+      @include breakpoint($breakpoint-m) {
+        @include column(4);
+        @include last-col3;
+      }
+    }
+  }
+  .team {
+    @include divider-top;
+    @include grid-breakout;
+  }
+}

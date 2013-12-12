@@ -29,15 +29,15 @@
             %li.position Executive Director, Children's Museum of Pittsburgh
       %a{:href => "#", :class => "read-more"} Read more client testimonials. &raquo;
 
-    %section.activity
+    %section.activity-group
       %h2 Writing &amp; Speaking
-      %article.activity-item.writing
+      %article.activity.writing
         %h3.title
           %a{:href => "#"}Let&rsquo;s Do It! What Are We Doing?
         %ul
           %li.attribution by Matt Griffin
           %li.publisher on A List Apart
-      %article.activity-item.event
+      %article.activity.event
         %h3.title
           %a{:href => "#"}Giant Conference
         %ul
@@ -60,45 +60,4 @@
       %h2 Who We Are
       %section.intro
         %p Bearded is a design and development agency that creates useful, beautiful things for the multi-device web. Whether you’re selling products or services, telling stories, or saving the world, we can help you do more of it.
-      %section.team
-        %section.stats
-          %ul
-            %li
-              %img.icon{:src => "/wireframe/images/icon-bike.svg"}
-            %li
-              %img.icon{:src => "/wireframe/images/icon-bake.svg"}
-            %li
-              %img.icon{:src => "/wireframe/images/icon-run.svg"}
-            %li
-              %img.icon{:src => "/wireframe/images/icon-matt.svg"}
-            %li
-              %img.icon{:src => "/wireframe/images/icon-pittsburgh.svg"}
-            %li
-              %img.icon.last{:src => "/wireframe/images/icon-nice.svg"}
-          %p.hint-text Click on the icons to learn more about the Beardeds.
-
-        %section.profiles
-          %article.person
-            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
-            %h3.name Matt Griffin
-            %span.title Founder
-          %article.person
-            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
-            %h3.name Brett Bender
-            %span.title Lead Developer
-          %article.person
-            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
-            %h3.name Matt Braun
-            %span.title Lead Designer
-          %article.person
-            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
-            %h3.name Caralyn Green
-            %span.title Content Strategist
-          %article.person
-            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
-            %h3.name Patrick Fulton
-            %span.title Developer
-          %article.person.last
-            %img.inserted-image{:src => "/wireframe/images/image-sq.jpg"}
-            %h3.name Mark Frey
-            %span.title Developer
+      = haml :'wireframe/partials/_team.html'

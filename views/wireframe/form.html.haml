@@ -2,23 +2,22 @@
   -# If appropriate, you could use an h1 here and provide more meaning in the document outline.
   .container
     = haml :'wireframe/partials/_breadcrumbs.html'
-    %section.contact-detail
+    %section.primary.contact-detail
       %h1.page-title Contact Us
-      %aside.secondary{:role => "complementary"}
-        %section.contact-information
-          %section.intro
-            %p We help folks from around the world bring their web projects to life. Ready to get started? We’d love to hear from you.
-          %article#organization-info.vcard{:itemscope => "", :itemtype => "http://schema.org/Organization"}
-            %h1.fn.org{:itemprop => "name"} 
-              %a{:href => "#"} Bearded
-            .adr{:itemprop => "address", :itemscope => "", :itemtype => "http://schema.org/PostalAddress"}
-              %div{:itemprop => "streetAddress"}
-                %span.street-address 6101 Penn Avenue, 
-                %span.extended-address Suite 302 
-              %span.locality{:itemprop => "addressLocality"} Pittsburgh,
-              %span.region{:itemprop => "addressRegion"} PA
-              %span.postal-code{:itemprop => "postalCode"} 15206
-            %div.tel{:itemprop => "telephone"} 412.376.7273
+      %section.contact-information
+        %section.intro
+          %p We help folks from around the world bring their web projects to life. Ready to get started? We’d love to hear from you.
+        %article#organization-info.vcard{:itemscope => "", :itemtype => "http://schema.org/Organization"}
+          %h1.fn.org{:itemprop => "name"} 
+            %a{:href => "#"} Bearded
+          .adr{:itemprop => "address", :itemscope => "", :itemtype => "http://schema.org/PostalAddress"}
+            %div{:itemprop => "streetAddress"}
+              %span.street-address 6101 Penn Avenue, 
+              %span.extended-address Suite 302 
+            %span.locality{:itemprop => "addressLocality"} Pittsburgh,
+            %span.region{:itemprop => "addressRegion"} PA
+            %span.postal-code{:itemprop => "postalCode"} 15206
+          %div.tel{:itemprop => "telephone"} 412.376.7273
       %section.contact-form
         %form{:action => "#", :role => "form"}
           .input
@@ -37,9 +36,13 @@
               %option{:value => "2"} Request a Proposal
               %option{:value => "3"} Inquiring About a Job Opportunity
           .input
-            %label{:for => "timeline"} Timeline:
+            %label{:for => "timeline"} Launch:
             %input{:name => "timeline", :type => "text"}
-            %p.hint-text When will your project to go live? What’s driving the launch date?
+            %p.hint-text When will your project to go live?
+          .input
+            %label{:for => "message"} Timeline:
+            %textarea{:name => "message", :rows => "4"}
+            %p.hint-text What’s driving the launch date?
           .input
             %label{:for => "budget"} Budget:
             %input{:name => "budget", :type => "text"}
@@ -47,6 +50,7 @@
           .input
             %label{:for => "message"} Message:
             %textarea{:name => "message", :rows => "4"}
+            %p.hint-text Tell us about your project.
           %input.submit-button{:type => "submit", :value => "Submit"}
 
         -# alternatively, use the <button> element
